@@ -4,9 +4,10 @@ This project displays tunning of a PID controller for a simulation of an autonom
 
 The twiddle tunning program makes use of a proportional controller that governs the throttle of the vehicle to make it go a constant speed. 20 mph was chosen.
 
-While the vehicle laps around the course a timer keeps track of duration on the course. Every approximate time roughly 2 minutes and 20 seconds pass, the twiddle function is called and new gains are chosen for a trial lap. The total error for each trial lap is measured and then used to determine if the adjustment in the gains has improved performance since the previous set of gains as in the classic twiddle method. Below is the code for the twiddle method as found in PID.cpp:
+While the vehicle laps around the course a timer keeps track of duration on the course. Every time roughly 2 minutes and 20 seconds pass (The time it takes to complete a lap at 20mph), the twiddle function is called and new gains are chosen for a trial lap. The total error for each trial lap is measured and then used to determine if the adjustment in the gains has improved performance since the previous set of gains as in the classic twiddle method. Below is the code for the twiddle method as found in PID.cpp:
 
-`void PID::Twiddle(){
+```
+void PID::Twiddle(){
   if( (dp[0] + dp[1] + dp[2]) > 0.0001 ){
 
     if(ts_==stage_one){
@@ -48,7 +49,8 @@ While the vehicle laps around the course a timer keeps track of duration on the 
     return;
   }
 }
-`
+
+```
 
 The gains ultimately converged to P=1.011, I=-0.005, D=0.01 but never trip off the sumation convergence criterion.
 This is most likely due to the method of using time to keep track of trials rather than a specific marker on the course of some sort, leading to less than perfect comparisons of total trial error.
