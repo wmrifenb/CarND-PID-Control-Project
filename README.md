@@ -6,7 +6,7 @@ The twiddle tunning program makes use of a proportional controller that governs 
 
 While the vehicle laps around the course a timer keeps track of duration on the course. Every time roughly 2 minutes and 20 seconds pass (The time it takes to complete a lap at 20mph), the twiddle function is called and new gains are chosen for a trial lap. The total error for each trial lap is measured and then used to determine if the adjustment in the gains has improved performance since the previous set of gains as in the classic twiddle method. Below is the code for the twiddle method as found in PID.cpp:
 
-```
+```C++
 void PID::Twiddle(){
   if( (dp[0] + dp[1] + dp[2]) > 0.0001 ){
 
