@@ -1,92 +1,134 @@
-# CarND-Controls-PID
-Self-Driving Car Engineer Nanodegree Program
-
----
-
-## Dependencies
-
-* cmake >= 3.5
- * All OSes: [click here for installation instructions](https://cmake.org/install/)
-* make >= 4.1
-  * Linux: make is installed by default on most Linux distros
-  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
-* gcc/g++ >= 5.4
-  * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
-* [uWebSockets](https://github.com/uWebSockets/uWebSockets)
-  * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
-  * If you install from source, checkout to commit `e94b6e1`, i.e.
-    ```
-    git clone https://github.com/uWebSockets/uWebSockets 
-    cd uWebSockets
-    git checkout e94b6e1
-    ```
-    Some function signatures have changed in v0.14.x. See [this PR](https://github.com/udacity/CarND-MPC-Project/pull/3) for more details.
-* Simulator. You can download these from the [project intro page](https://github.com/udacity/self-driving-car-sim/releases) in the classroom.
-
-There's an experimental patch for windows in this [PR](https://github.com/udacity/CarND-PID-Control-Project/pull/3)
-
-## Basic Build Instructions
-
-1. Clone this repo.
-2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
-
-## Editor Settings
-
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
-
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
-
-## Code Style
-
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
-
-## Project Instructions and Rubric
-
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
-
-More information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
-for instructions and the project rubric.
-
-## Hints!
-
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
-
-## Call for IDE Profiles Pull Requests
-
-Help your fellow students!
-
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to we ensure
-that students don't feel pressured to use one IDE or another.
-
-However! I'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
-
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
-
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
-
-Frankly, I've never been involved in a project with multiple IDE profiles
-before. I believe the best way to handle this would be to keep them out of the
-repo root to avoid clutter. My expectation is that most profiles will include
-instructions to copy files to a new location to get picked up by the IDE, but
-that's just a guess.
-
-One last note here: regardless of the IDE used, every submitted project must
-still be compilable with cmake and make./
+Listening to port 4567
+Connected!!!
+[18.4006] - P: 1.011, I: -0.0006, D: 0.01
+[36.8001] - P: 1.011, I: -0.0004, D: 0.01
+[55.2007] - P: 1.011, I: -0.0005, D: 0.02
+[73.6003] - P: 1.011, I: -0.0005, D: 0
+[92.0004] - P: 1.022, I: -0.0005, D: 0.01
+[110.4] - P: 1, I: -0.0005, D: 0.01
+[128.801] - P: 1.011, I: -0.00059, D: 0.01
+[147.2] - P: 1.011, I: -0.00041, D: 0.01
+[165.6] - P: 1.011, I: -0.0005, D: 0.019
+[184] - P: 1.011, I: -0.0005, D: 0.001
+[202.401] - P: 1.0209, I: -0.0005, D: 0.01
+[220.801] - P: 1.0011, I: -0.0005, D: 0.01
+[239.2] - P: 1.011, I: -0.000581, D: 0.01
+[257.6] - P: 1.011, I: -0.000419, D: 0.01
+[276.001] - P: 1.011, I: -0.0005, D: 0.0181
+[294.4] - P: 1.011, I: -0.0005, D: 0.0019
+[312.801] - P: 1.01991, I: -0.0005, D: 0.01
+[331.2] - P: 1.00209, I: -0.0005, D: 0.01
+[349.601] - P: 1.011, I: -0.0005729, D: 0.01
+[368.001] - P: 1.011, I: -0.0004271, D: 0.01
+[386.401] - P: 1.011, I: -0.0005, D: 0.01729
+[404.8] - P: 1.011, I: -0.0005, D: 0.00271
+[423.201] - P: 1.01902, I: -0.0005, D: 0.01
+[441.601] - P: 1.00298, I: -0.0005, D: 0.01
+[460.001] - P: 1.011, I: -0.00056561, D: 0.01
+[478.4] - P: 1.011, I: -0.00043439, D: 0.01
+[496.801] - P: 1.011, I: -0.0005, D: 0.016561
+[515.2] - P: 1.011, I: -0.0005, D: 0.003439
+[533.6] - P: 1.01822, I: -0.0005, D: 0.01
+[552.001] - P: 1.00378, I: -0.0005, D: 0.01
+[570.4] - P: 1.011, I: -0.000559049, D: 0.01
+[588.801] - P: 1.011, I: -0.000440951, D: 0.01
+[607.2] - P: 1.011, I: -0.0005, D: 0.0159049
+[625.601] - P: 1.011, I: -0.0005, D: 0.0040951
+[644.001] - P: 1.0175, I: -0.0005, D: 0.01
+[662.401] - P: 1.0045, I: -0.0005, D: 0.01
+[680.8] - P: 1.011, I: -0.000553144, D: 0.01
+[699.201] - P: 1.011, I: -0.000446856, D: 0.01
+[717.601] - P: 1.011, I: -0.0005, D: 0.0153144
+[736.001] - P: 1.011, I: -0.0005, D: 0.00468559
+[754.4] - P: 1.01685, I: -0.0005, D: 0.01
+[772.801] - P: 1.00515, I: -0.0005, D: 0.01
+[791.201] - P: 1.011, I: -0.00054783, D: 0.01
+[809.601] - P: 1.011, I: -0.00045217, D: 0.01
+[828.001] - P: 1.011, I: -0.0005, D: 0.014783
+[846.401] - P: 1.011, I: -0.0005, D: 0.00521703
+[864.8] - P: 1.01626, I: -0.0005, D: 0.01
+[883.201] - P: 1.00574, I: -0.0005, D: 0.01
+[901.6] - P: 1.011, I: -0.000543047, D: 0.01
+[920.001] - P: 1.011, I: -0.000456953, D: 0.01
+[938.401] - P: 1.011, I: -0.0005, D: 0.0143047
+[956.801] - P: 1.011, I: -0.0005, D: 0.00569533
+[975.201] - P: 1.01574, I: -0.0005, D: 0.01
+[993.601] - P: 1.00626, I: -0.0005, D: 0.01
+[1012] - P: 1.011, I: -0.000538742, D: 0.01
+[1030.4] - P: 1.011, I: -0.000461258, D: 0.01
+[1048.8] - P: 1.011, I: -0.0005, D: 0.0138742
+[1067.2] - P: 1.011, I: -0.0005, D: 0.0061258
+[1085.6] - P: 1.01526, I: -0.0005, D: 0.01
+[1104] - P: 1.00674, I: -0.0005, D: 0.01
+[1122.4] - P: 1.011, I: -0.000534868, D: 0.01
+[1140.8] - P: 1.011, I: -0.000465132, D: 0.01
+[1159.2] - P: 1.011, I: -0.0005, D: 0.0134868
+[1177.6] - P: 1.011, I: -0.0005, D: 0.00651322
+[1196] - P: 1.01484, I: -0.0005, D: 0.01
+[1214.4] - P: 1.00716, I: -0.0005, D: 0.01
+[1232.8] - P: 1.011, I: -0.000531381, D: 0.01
+[1251.2] - P: 1.011, I: -0.000468619, D: 0.01
+[1269.6] - P: 1.011, I: -0.0005, D: 0.0131381
+[1288] - P: 1.011, I: -0.0005, D: 0.00686189
+[1306.4] - P: 1.01445, I: -0.0005, D: 0.01
+[1324.8] - P: 1.00755, I: -0.0005, D: 0.01
+[1343.2] - P: 1.011, I: -0.000528243, D: 0.01
+[1361.6] - P: 1.011, I: -0.000471757, D: 0.01
+[1380] - P: 1.011, I: -0.0005, D: 0.0128243
+[1398.4] - P: 1.011, I: -0.0005, D: 0.0071757
+[1416.8] - P: 1.01411, I: -0.0005, D: 0.01
+[1435.2] - P: 1.00789, I: -0.0005, D: 0.01
+[1453.6] - P: 1.011, I: -0.000525419, D: 0.01
+[1472] - P: 1.011, I: -0.000474581, D: 0.01
+[1490.4] - P: 1.011, I: -0.0005, D: 0.0125419
+[1508.8] - P: 1.011, I: -0.0005, D: 0.00745813
+[1527.2] - P: 1.0138, I: -0.0005, D: 0.01
+[1545.6] - P: 1.0082, I: -0.0005, D: 0.01
+[1564] - P: 1.011, I: -0.000522877, D: 0.01
+[1582.4] - P: 1.011, I: -0.000477123, D: 0.01
+[1600.8] - P: 1.011, I: -0.0005, D: 0.0122877
+[1619.2] - P: 1.011, I: -0.0005, D: 0.00771232
+[1637.6] - P: 1.01352, I: -0.0005, D: 0.01
+[1656] - P: 1.00848, I: -0.0005, D: 0.01
+[1674.4] - P: 1.011, I: -0.000520589, D: 0.01
+[1692.8] - P: 1.011, I: -0.000479411, D: 0.01
+[1711.2] - P: 1.011, I: -0.0005, D: 0.0120589
+[1729.6] - P: 1.011, I: -0.0005, D: 0.00794109
+[1748] - P: 1.01326, I: -0.0005, D: 0.01
+[1766.4] - P: 1.00874, I: -0.0005, D: 0.01
+[1784.8] - P: 1.011, I: -0.00051853, D: 0.01
+[1803.2] - P: 1.011, I: -0.00048147, D: 0.01
+[1821.6] - P: 1.011, I: -0.0005, D: 0.011853
+[1840] - P: 1.011, I: -0.0005, D: 0.00814698
+[1858.4] - P: 1.01304, I: -0.0005, D: 0.01
+[1876.8] - P: 1.00896, I: -0.0005, D: 0.01
+[1895.2] - P: 1.011, I: -0.000516677, D: 0.01
+[1913.6] - P: 1.011, I: -0.000483323, D: 0.01
+[1932] - P: 1.011, I: -0.0005, D: 0.0116677
+[1950.4] - P: 1.011, I: -0.0005, D: 0.00833228
+[1968.8] - P: 1.01283, I: -0.0005, D: 0.01
+[1987.2] - P: 1.00917, I: -0.0005, D: 0.01
+[2005.6] - P: 1.011, I: -0.000515009, D: 0.01
+[2024] - P: 1.011, I: -0.000484991, D: 0.01
+[2042.4] - P: 1.011, I: -0.0005, D: 0.0115009
+[2060.8] - P: 1.011, I: -0.0005, D: 0.00849905
+[2079.2] - P: 1.01265, I: -0.0005, D: 0.01
+[2097.6] - P: 1.00935, I: -0.0005, D: 0.01
+[2116] - P: 1.011, I: -0.000513509, D: 0.01
+[2134.4] - P: 1.011, I: -0.000486491, D: 0.01
+[2152.8] - P: 1.011, I: -0.0005, D: 0.0113509
+[2171.2] - P: 1.011, I: -0.0005, D: 0.00864915
+[2189.6] - P: 1.01249, I: -0.0005, D: 0.01
+[2208] - P: 1.00951, I: -0.0005, D: 0.01
+[2226.4] - P: 1.011, I: -0.000512158, D: 0.01
+[2244.8] - P: 1.011, I: -0.000487842, D: 0.01
+[2263.2] - P: 1.011, I: -0.0005, D: 0.0112158
+[2281.6] - P: 1.011, I: -0.0005, D: 0.00878423
+[2300] - P: 1.01234, I: -0.0005, D: 0.01
+[2318.4] - P: 1.00966, I: -0.0005, D: 0.01
+[2336.8] - P: 1.011, I: -0.000510942, D: 0.01
+[2355.2] - P: 1.011, I: -0.000489058, D: 0.01
+[2373.6] - P: 1.011, I: -0.0005, D: 0.0110942
+[2392] - P: 1.011, I: -0.0005, D: 0.00890581
+[2410.4] - P: 1.0122, I: -0.0005, D: 0.01
+[2428.8] - P: 1.0098, I: -0.0005, D: 0.01
